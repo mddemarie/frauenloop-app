@@ -1,5 +1,7 @@
 ## Check the HOMEWORK: retrieve all users from external API - using AJAX
 
+## MONEY PROJECT - Don will explain
+
 ## SETUP
 # 1. install Python
 # 2. install virtual environment
@@ -7,6 +9,7 @@
 # 4. install Flask
 
 ## BACKEND
+# How functions work
 # Build a minimal app with Flask
 # Build first own API in 1 file
 # TASK: retrieve 1 restaurant with the url /restaurant/1
