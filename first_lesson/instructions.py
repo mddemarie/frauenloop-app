@@ -1,4 +1,4 @@
-## Check the HOMEWORK: retrieve all users from external API
+## Check the HOMEWORK: retrieve all users from external API - using AJAX
 
 ## SETUP
 # 1. install Python
@@ -10,3 +10,8 @@
 # Build a minimal app with Flask
 # Build first own API in 1 file
 # TASK: retrieve 1 restaurant with the url /restaurant/1
+
+## ADVICE
+# update your LinkedIn profile with the technologies like: HTML, CSS, Git, Bootstrap, JavaScript, jQuery, API, web development, Python, Flask
+# paste the web url of your GitHub profile to your LinkedIn summary
+# add any code you write here to your GitHub - it is your portfolio!!!
