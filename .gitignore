@@ -1,0 +1,9 @@
+# Python
+project/__pycache__/
+
+# Python files
+*.pyc
+*.pyo
+
+# Settings
+.vscode
