@@ -5,7 +5,7 @@ app = Flask(__name__)
 restaurants = [
     {
         'id': 1,
-        'restaurant': '1990 Vegan living',
+        'name': '1990 Vegan living',
         'address': 'Krossener Str. 19, 10245 Berlin', 
         'food_type': 'vegan',
         'google_reviews': 4.6,
@@ -13,7 +13,7 @@ restaurants = [
     },
     {
         'id': 2,
-        'restaurant': 'Chay Village',
+        'name': 'Chay Village',
         'address': 'Niederbarnimstraße 10, 10249 Berlin', 
         'food_type': 'vegetarian',
         'google_reviews': 4.5,
@@ -21,7 +21,7 @@ restaurants = [
     },
     {
         'id': 3,
-        'restaurant': 'Gotcha',
+        'name': 'Gotcha',
         'address': 'Simon-Dach-Straße 6, 10245 Berlin', 
         'food_type': 'vietnamese',
         'google_reviews': 4.4,
@@ -29,7 +29,7 @@ restaurants = [
     },
     {
         'id': 4,
-        'restaurant': 'Portofino',
+        'name': 'Portofino',
         'address': 'Gubener Str. 48, 10243 Berlin', 
         'food_type': 'italian',
         'google_reviews': 4.6,
@@ -37,7 +37,7 @@ restaurants = [
     },
     {
         'id': 5,
-        'restaurant': 'Speisehaus Berlin',
+        'name': 'Speisehaus Berlin',
         'address': 'Wühlischstraße 30, 10245 Berlin', 
         'food_type': 'german',
         'google_reviews': 4.3,
