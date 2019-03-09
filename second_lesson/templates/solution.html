@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>The List of Restaurants</title>
+    </head>
+    <body>
+        <h1>The List of Restaurants in Berlin-Friedrichshain</h1>
+        <ul>
+            {% for restaurant in restaurants %}
+            <li>
+                <p>{{ restaurant.name }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
