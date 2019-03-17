@@ -14,6 +14,7 @@
 # corb = ["banana", "cherry", "pear"]
 # for fruit in corb:
 #    print(fruit)
+# print(corb[0]), print(corb[1], print(corb[2]))
 
 ## BACKEND class
 # How to serve Hello world using tags <h1>
