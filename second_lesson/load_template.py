@@ -47,4 +47,4 @@ restaurants = [
 
 @app.route('/')
 def get_all_restaurants():
-    return render_template('solution.html', restaurants=restaurants)
+    return render_template('index.html', restaurants=restaurants)
