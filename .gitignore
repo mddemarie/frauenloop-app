@@ -7,3 +7,5 @@ project/__pycache__/
 
 # Settings
 .vscode
+
+venv/
