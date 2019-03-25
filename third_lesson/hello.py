@@ -1,6 +1,8 @@
 from flask import Flask, render_template
+from forms import RestaurantForm
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'a4267c9719bb78ad69dd1ab1305bd9b5'
 
 restaurants = [
     {
@@ -45,14 +47,22 @@ restaurants = [
     }
 ]
 
+## How include works in Templates
 # @app.route('/')
 # def get_all_restaurants():
 #     return render_template('index.html', restaurants=restaurants)
 
-@app.route('/restaurant/1')
-def get_first_restaurant():
-    return render_template('index.html', restaurants=restaurants)
+## TASK: USE BLOCK CONTENT FOR 1 RESTAURANT
+# @app.route('/restaurant/1')
+# def get_first_restaurant():
+#     return render_template('index.html', restaurants=restaurants)
 
+## Block content
 @app.route('/restaurants')
 def get_all_restaurants():
     return render_template('restaurants.html', restaurants=restaurants)
+
+@app.route('/restaurant_form', methods=['GET', 'POST'])
+def get_restaurant_form():
+    form = RestaurantForm()
+    return render_template('register_restaurant.html', title='Register', form=form)
