@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>The List of Restaurants in Berlin-Friedrichshain</h1>
+    <ul>
+        {% for restaurant in restaurants %}
+        <li>
+            <p>{{ restaurant.name }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
