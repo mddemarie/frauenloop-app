@@ -8,4 +8,6 @@ project/__pycache__/
 # Settings
 .vscode
 
+# Student's work
+hello_from_victoria.py
 venv/
