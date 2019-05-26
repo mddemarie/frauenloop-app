@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -45,21 +45,10 @@ restaurants = [
     }
 ]
 
+## Controller
 @app.route('/restaurants')
-def get_restaurants():
-    return jsonify(restaurants)
-
-# SOLUTION of the task:
-@app.route('/restaurant/1')
-def get_one_restaurant():
-    return jsonify(restaurants[0])
-
-# OR:
-# @app.route('/restaurant/<int:restaurant_id>')
-# def get_any_restaurant(restaurant_id):
-#     for rest_num in range(len(restaurants) + 1):
-#         if restaurants[rest_num]['id'] == restaurant_id:
-#             return jsonify(restaurants[restaurant_id])
+def get_all_restaurants():
+    return render_template('restaurants.html', restaurants=restaurants)
 
 if __name__ == '__main__':
     app.run(debug = True)
