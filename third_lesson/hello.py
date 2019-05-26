@@ -62,7 +62,7 @@ restaurants = [
 def get_all_restaurants():
     return render_template('restaurants.html', restaurants=restaurants)
 
-@app.route('/restaurant_form', methods=['GET', 'POST'])
-def get_restaurant_form():
-    form = RestaurantForm()
-    return render_template('register_restaurant.html', title='Register', form=form)
+# @app.route('/restaurant_form', methods=['GET', 'POST'])
+# def get_restaurant_form():
+#     form = RestaurantForm()
+#     return render_template('register_restaurant.html', title='Register', form=form)
