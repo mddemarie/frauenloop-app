@@ -1,19 +1,25 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+## write a function here!
+## copy the code from account.py
+
 user_data = {'user1': ['1234', 2000], 'user2': ['5576', 3000], 'user3': ['2293', 200]}
 
+@app.route('/balance')
 def display_balance(pin_number, user):
     if pin_number == user_data[user][0]:
-        interest_rate = 0
-        interest_rate += 1
         return 'This is your current balance: {} EUR'.format(user_data[user][1])
     else:
         return pin_error()
-print(display_balance('1234', 'user1'))
 
 def pin_error():
     return 'Access denied: incorrect PIN.'
 
 # print(display_balance(1234, 'user1'))
 
+@app.route('/withdraw')
 def withdraw_money(pin_number, user_name, amount):
     balance = user_data[user_name][1]
     if pin_number == user_data[user_name][0]:
@@ -26,3 +32,13 @@ def withdraw_money(pin_number, user_name, amount):
         return pin_error()
 
 # print(withdraw_money(1234, 'user1', 50))
+
+if __name__ == '__main__':
+    app.run(debug = True)
+
+## SETUP (for those who do not have virtual env in the app)
+# go to the directory called 'bank_account_app'
+# create virtual environment on Windows
+# activate virtual environment on Windows
+# install Flask: 'pip3 install flask'
+# run this command: 'pip freeze > requirements.txt'
