@@ -5,12 +5,13 @@ def display_balance(pin_number, user):
     if pin_number == list_with_pins[user]:
         return 'This is your current balance: {} EUR'.format(balance)
     else:
-        pin_error()
+        return pin_error()
 
+# pin_error = 'Access denied: incorrect PIN.'
 def pin_error():
     return 'Access denied: incorrect PIN.'
 
-print(display_balance(1234, 'user1'))
+# print(display_balance(1234, 'user1'))
 
 ## Write a similar function called 'withdraw_money'
 ## withdraw_money should have 2 args 'pin_number' and 'amount'
