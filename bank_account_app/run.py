@@ -1,39 +1,4 @@
-from flask import Flask, request
-
-app = Flask(__name__)
-
-user_data = {'user1': ['1234', 2000], 'user2': ['5576', 3000], 'user3': ['2293', 200]}
-
-# http://127.0.0.1:5000/balance?pin=1234&user=user2
-@app.route('/balance')
-def display_balance():
-    pin_number = request.args.get('pin') #
-    user = request.args.get('user') #
-    if pin_number == user_data[user][0]:
-        return 'This is your current balance: {} EUR'.format(user_data[user][1])
-    else:
-        return pin_error()
-
-def pin_error():
-    return 'Access denied: incorrect PIN.'
-
-# http://127.0.0.1:5000/withdraw?pin=1234&user=user1&amount=50
-@app.route('/withdraw')
-def withdraw_money():
-    pin_number = request.args.get('pin') #
-    user_name = request.args.get('user') #
-    amount = request.args.get('amount') #
-    amount = int(amount) # why does this have to be transformed into integer?
-
-    balance = user_data[user_name][1]
-    if pin_number == user_data[user_name][0]:
-        if amount <= balance:
-            balance = balance - amount
-            return 'Withdrew {} EUR. New balance is: {} EUR.'.format(amount, balance)
-        else:
-            return 'You are not allowed to withdraw more money than you have on your account!'
-    else:
-        return pin_error()
+from project import app
 
 if __name__ == '__main__':
     app.run(debug = True)

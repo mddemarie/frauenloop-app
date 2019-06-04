@@ -2,8 +2,6 @@ user_data = {'user1': ['1234', 2000], 'user2': ['5576', 3000], 'user3': ['2293',
 
 def display_balance(pin_number, user):
     if pin_number == user_data[user][0]:
-        interest_rate = 0
-        interest_rate += 1
         return 'This is your current balance: {} EUR'.format(user_data[user][1])
     else:
         return pin_error()
