@@ -1,6 +1,6 @@
 from flask import request
 
-from project.database import users
+from project.models import User
 from project import app
 
 @app.route('/')
